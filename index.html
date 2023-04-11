@@ -44,7 +44,7 @@
               <button class="customPercent" id="customPercent" onclick="openCustom(); tipPercent(this.id)">Custom</button>
               <div class="calculator__input--tip--button--custom flex" id ="customvalue">
                 <label for="percent">Enter the tip percent.</label>
-                <input type="number" name="customPerc" id="customPerc">
+                <input type="number" name="customPerc" id="customPerc" onclick="tipPercent(this.id)" oninput="tipPercent(this.id)">
               </div>
             </div>
           </div>

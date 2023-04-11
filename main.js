@@ -37,21 +37,22 @@ function checkWarning() {
   }
 }
 
+//To open custom box
+function openCustom() {
+  customShowing.style.display = "flex";
+}
+
 //Select button
 function tipPercent(btnID){
     if(btnID != "customPercent"){
         tipValue= document.getElementById(btnID).value;
     }
     else{
-        console.log("check");
         tipValue= document.getElementById("customPerc").value;
+        tipValue /=100;
+        console.log(tipValue);
     }
  
-}
-
-//To open custom box
-function openCustom() {
-  customShowing.style.display = "flex";
 }
 
 //Calculation of total amount
