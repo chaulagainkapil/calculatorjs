@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+input {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+main {
+  height: 100vh;
+  flex-direction: column;
+  gap: 40px;
+}
+main .calculator {
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  border-radius: 20px;
+  gap: 20px;
+}
+main .calculator__input--bill {
+  flex-direction: column;
+  padding: 20px 0;
+}
+main .calculator__input--bill--label {
+  justify-content: space-between;
+  gap: 10px;
+}
+main .calculator__input--bill--label label {
+  color: hsl(184, 14%, 56%);
+  padding-bottom: 5px;
+}
+main .calculator__input--bill p {
+  color: red;
+}
+main .calculator__input--bill input {
+  background-color: hsl(189, 41%, 97%);
+  padding: 10px;
+  background-image: url(../../images/icon-dollar.svg);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  border: none;
+  text-align: right;
+  width: 100%;
+}
+main .calculator__input--tip {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+main .calculator__input--tip label {
+  color: hsl(184, 14%, 56%);
+  padding-bottom: 10px;
+}
+main .calculator__input--tip--button {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 10px;
+}
+main .calculator__input--tip--button button {
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  cursor: pointer;
+}
+main .calculator__input--tip--button .fifteenPercent {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(186, 14%, 43%);
+}
+main .calculator__input--tip--button .customPercent {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(186, 14%, 43%);
+}
+main .calculator__input--tip--button--custom {
+  display: none;
+  flex-direction: column;
+  padding: 20px 0;
+  grid-area: 4/1/4/4;
+}
+main .calculator__input--tip--button--custom label {
+  color: hsl(184, 14%, 56%);
+  padding-bottom: 10px;
+}
+main .calculator__input--tip--button--custom input {
+  background-color: hsl(189, 41%, 97%);
+  padding: 10px;
+  background-image: url(../../images/icon-dollar.svg);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  border: none;
+  text-align: right;
+  width: 100%;
+}
+main .calculator__input--people {
+  padding: 20px 0;
+  flex-direction: column;
+}
+main .calculator__input--people--label {
+  justify-content: space-between;
+  gap: 10px;
+}
+main .calculator__input--people--label label {
+  color: hsl(184, 14%, 56%);
+  padding-bottom: 5px;
+}
+main .calculator__input--people--label p {
+  color: red;
+}
+main .calculator__input--people input {
+  background-color: hsl(189, 41%, 97%);
+  padding: 10px;
+  background-image: url(../../images/icon-person.svg);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  border: none;
+  text-align: right;
+  width: 100%;
+}
+main .calculator__output {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 20px;
+  padding: 40px 20px;
+  flex-direction: column;
+}
+main .calculator__output--perperson, main .calculator__output--total {
+  padding-bottom: 40px;
+}
+main .calculator__output--perperson--price p, main .calculator__output--total--price p {
+  font-size: 2em;
+  color: hsl(172, 67%, 45%);
+}
+main .calculator__output--perperson--label, main .calculator__output--total--label {
+  color: hsl(185, 41%, 84%);
+}
+main .calculator__output--perperson--label span, main .calculator__output--total--label span {
+  display: block;
+  font-size: 14px;
+  color: hsl(184, 14%, 56%);
+}
+main .calculator__output--reset {
+  padding-top: 40px;
+}
+main .calculator__output--reset button {
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  color: hsl(186, 14%, 43%);
+  text-transform: uppercase;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    height: auto;
+    padding-top: 30px;
+  }
+  main .calculator {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+  }
+  main .calculator > div {
+    width: 90%;
+  }
+  main .calculator__input--tip--button {
+    grid-template-columns: 1fr 1fr;
+  }
+  main .calculator__input--tip--button--custom {
+    grid-area: 4/1/4/3;
+  }
+  main .calculator__output--perperson, main .calculator__output--total {
+    gap: 20px;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */

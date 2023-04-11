@@ -1,0 +1,188 @@
+main {
+  height: 100vh;
+  flex-direction: column;
+  gap: 40px;
+  .calculator {
+    background-color: $color__white;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 20px;
+    &__input {
+      &--bill {
+        flex-direction: column;
+        padding: 20px 0;
+        &--label {
+            justify-content: space-between;
+            gap: 10px;
+          label {
+            color: $color__grayCyan;
+            padding-bottom: 5px;
+          }
+        }
+          p{
+            color: red;
+          }
+        input {
+          background-color: $color__veryGray;
+          padding: 10px;
+          background-image: url(../../images/icon-dollar.svg);
+          background-position: 10px 10px;
+          background-repeat: no-repeat;
+          border: none;
+          text-align: right;
+          width: 100%;
+        }
+      }
+
+      &--tip {
+        flex-direction: column;
+        flex-wrap: wrap;
+        label {
+          color: $color__grayCyan;
+          padding-bottom: 10px;
+        }
+        &--button {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 10px 10px;
+          button {
+            background-color: $color__veryCyan;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: $font__Space;
+            font-size: 16px;
+            cursor: pointer;
+          }
+          .fifteenPercent {
+            background-color: $color__strongCyan;
+            color: $color__darkCyan;
+          }
+          .customPercent {
+            background-color: $color__lightGray;
+            color: $color__darkCyan;
+          }
+          &--custom {
+            display: none;
+            flex-direction: column;
+            padding: 20px 0;
+            grid-area: 4/1/4/4;
+            label {
+              color: $color__grayCyan;
+              padding-bottom: 10px;
+            }
+            input {
+              background-color: $color__veryGray;
+              padding: 10px;
+              background-image: url(../../images/icon-dollar.svg);
+              background-position: 10px 10px;
+              background-repeat: no-repeat;
+              border: none;
+              text-align: right;
+              width: 100%;
+            }
+          }
+        }
+      }
+      &--people {
+        padding: 20px 0;
+        flex-direction: column;
+        &--label {
+            justify-content: space-between;
+            gap: 10px;
+          label {
+            color: $color__grayCyan;
+            padding-bottom: 5px;
+          }
+          p{
+            color: red;
+          }
+        }
+        input {
+          background-color: $color__veryGray;
+          padding: 10px;
+          background-image: url(../../images/icon-person.svg);
+          background-position: 10px 10px;
+          background-repeat: no-repeat;
+          border: none;
+          text-align: right;
+          width: 100%;
+        }
+      }
+    }
+
+    &__output {
+      background-color: $color__veryCyan;
+      border-radius: 20px;
+      padding: 40px 20px;
+      flex-direction: column;
+      &--perperson,
+      &--total {
+        padding-bottom: 40px;
+        &--price {
+          p {
+            font-size: 2em;
+            color: $color__strongCyan;
+          }
+        }
+
+        &--label {
+          color: $color__lightGray;
+          span {
+            display: block;
+            font-size: 14px;
+            color: $color__grayCyan;
+          }
+        }
+      }
+      &--reset {
+        padding-top: 40px;
+        button {
+          background-color: $color__strongCyan;
+          border: none;
+          color: $color__darkCyan;
+          text-transform: uppercase;
+          width: 100%;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-family: $font__Space;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  main {
+    height: auto;
+    padding-top: 30px;
+    .calculator {
+      flex-direction: column;
+      width: 100%;
+      border-radius: 20px 20px 0px 0px;
+      > div {
+        width: 90%;
+      }
+      &__input {
+        &--tip {
+          &--button {
+            grid-template-columns: 1fr 1fr;
+            &--custom {
+              grid-area: 4/1/4/3;
+            }
+          }
+        }
+      }
+      &__output {
+        &--perperson,
+        &--total {
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
+//media query at 600px change flex direction
+//calculate function apply in js file

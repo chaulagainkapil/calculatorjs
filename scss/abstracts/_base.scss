@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Mono", monospace;
+  background-color: $color__lightGray;
+}
+a {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-around{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+input{
+    font-family: inherit;
+    font-size: 16px;
+}
