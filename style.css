@@ -42,7 +42,7 @@ input {
 }
 
 main {
-  height: 100vh;
+  height: 95vh;
   flex-direction: column;
   gap: 40px;
 }
@@ -211,6 +211,9 @@ main .calculator__output--reset button {
   }
   main .calculator__output--perperson, main .calculator__output--total {
     gap: 20px;
+  }
+  .nameLink {
+    background-color: hsl(0, 0%, 100%);
   }
 }
 .attribution {

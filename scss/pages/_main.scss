@@ -1,5 +1,5 @@
 main {
-  height: 100vh;
+  height: 95vh;
   flex-direction: column;
   gap: 40px;
   .calculator {
@@ -182,6 +182,9 @@ main {
         }
       }
     }
+  }
+  .nameLink{
+    background-color: $color__white;
   }
 }
 //media query at 600px change flex direction
