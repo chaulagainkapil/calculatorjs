@@ -100,7 +100,7 @@ main .calculator__input--tip--button button {
   font-size: 16px;
   cursor: pointer;
 }
-main .calculator__input--tip--button .fifteenPercent {
+main .calculator__input--tip--button button:hover, main .calculator__input--tip--button button:focus {
   background-color: hsl(172, 67%, 45%);
   color: hsl(186, 14%, 43%);
 }

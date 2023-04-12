@@ -12,16 +12,16 @@ main {
         flex-direction: column;
         padding: 20px 0;
         &--label {
-            justify-content: space-between;
-            gap: 10px;
+          justify-content: space-between;
+          gap: 10px;
           label {
             color: $color__grayCyan;
             padding-bottom: 5px;
           }
         }
-          p{
-            color: red;
-          }
+        p {
+          color: red;
+        }
         input {
           background-color: $color__veryGray;
           padding: 10px;
@@ -54,10 +54,10 @@ main {
             font-family: $font__Space;
             font-size: 16px;
             cursor: pointer;
-          }
-          .fifteenPercent {
-            background-color: $color__strongCyan;
-            color: $color__darkCyan;
+            &:hover, &:focus {
+              background-color: $color__strongCyan;
+              color: $color__darkCyan;
+            }
           }
           .customPercent {
             background-color: $color__lightGray;
@@ -89,13 +89,13 @@ main {
         padding: 20px 0;
         flex-direction: column;
         &--label {
-            justify-content: space-between;
-            gap: 10px;
+          justify-content: space-between;
+          gap: 10px;
           label {
             color: $color__grayCyan;
             padding-bottom: 5px;
           }
-          p{
+          p {
             color: red;
           }
         }
@@ -183,7 +183,7 @@ main {
       }
     }
   }
-  .nameLink{
+  .nameLink {
     background-color: $color__white;
   }
 }
