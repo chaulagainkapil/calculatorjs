@@ -20,7 +20,7 @@ main {
           }
         }
         p {
-          color: red;
+          color: $color__warning;
         }
         input {
           background-color: $color__veryGray;
@@ -51,13 +51,13 @@ main {
           button {
             background-color: $color__veryCyan;
             border: none;
-            color: white;
+            color: $color__white;
             padding: 10px 20px;
             border-radius: 5px;
             font-family: $font__Space;
             font-size: 16px;
             cursor: pointer;
-            &:hover, &:focus {
+            &:hover, &:focus, &:active {
               background-color: $color__strongCyan;
               color: $color__darkCyan;
             }
