@@ -48,7 +48,6 @@ function tipPercent(btnID) {
     tipValue = document.getElementById(btnID).value;
   } else {
     tipValue = document.getElementById("customPerc").value;
-    // tipValue = tipTemp / 100;
   }
   console.log(tipValue);
 }

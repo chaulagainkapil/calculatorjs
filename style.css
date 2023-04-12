@@ -77,6 +77,9 @@ main .calculator__input--bill input {
   text-align: right;
   width: 100%;
 }
+main .calculator__input--bill input:focus {
+  background-color: hsl(185, 41%, 84%);
+}
 main .calculator__input--tip {
   flex-direction: column;
   flex-wrap: wrap;
@@ -128,6 +131,9 @@ main .calculator__input--tip--button--custom input {
   text-align: right;
   width: 100%;
 }
+main .calculator__input--tip--button--custom input:focus {
+  background-color: hsl(185, 41%, 84%);
+}
 main .calculator__input--people {
   padding: 20px 0;
   flex-direction: column;
@@ -152,6 +158,9 @@ main .calculator__input--people input {
   border: none;
   text-align: right;
   width: 100%;
+}
+main .calculator__input--people input:focus {
+  background-color: hsl(185, 41%, 84%);
 }
 main .calculator__output {
   background-color: hsl(183, 100%, 15%);
