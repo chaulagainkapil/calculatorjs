@@ -43,16 +43,14 @@ function openCustom() {
 }
 
 //Select button
-function tipPercent(btnID){
-    if(btnID != "customPercent"){
-        tipValue= document.getElementById(btnID).value;
-    }
-    else{
-        tipValue= document.getElementById("customPerc").value;
-        tipValue /=100;
-        console.log(tipValue);
-    }
- 
+function tipPercent(btnID) {
+  if (btnID != "customPercent") {
+    tipValue = document.getElementById(btnID).value;
+  } else {
+    tipValue = document.getElementById("customPerc").value;
+    // tipValue = tipTemp / 100;
+  }
+  console.log(tipValue);
 }
 
 //Calculation of total amount
@@ -60,14 +58,13 @@ setInterval(function calculate() {
   if (cost.value >= 0 && person.value >= 1) {
     var total = (cost.value / person.value).toFixed(2);
     totalShowing.innerHTML = "$" + total;
-    var totaltip = (tipValue * cost.value / person.value).toFixed(2);
+    var totaltip = ((tipValue * cost.value) / person.value / 100).toFixed(2);
     tipShowing.innerHTML = "$" + totaltip;
-  }
-  else{
+  } else {
     totalShowing.innerHTML = "$0.00";
     tipShowing.innerHTML = "$0.00";
   }
-}, 10);
+}, 100);
 
 //for Reset
 function resetAll() {

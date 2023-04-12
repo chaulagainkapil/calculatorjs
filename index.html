@@ -31,16 +31,16 @@
               <label for="amount">Bill</label><br />
               <p id="cost-warning"></p>
             </div>
-            <input type="number" name="amount" id="amount" oninput="checkWarningc()"/>
+            <input type="number" name="amount" id="amount" step="0.01" oninput="checkWarningc()"/>
           </div>
           <div class="calculator__input--tip flex">
             <label for="tip percent">Select Tip %</label>
             <div class="calculator__input--tip--button" id="buttonsList">
-              <button class="fivePercent" id="fivePercent" value="0.05" onclick="tipPercent(this.id)">5%</button>
-              <button class="tenPercent" id="tenPercent" value="0.10" onclick="tipPercent(this.id)">10%</button>
-              <button class="fifteenPercent" id="fifteenPercent" value="0.15" onclick="tipPercent(this.id)">15%</button>
-              <button class="twentyFivePercent" id="twentyFivePercent" value="0.25" onclick="tipPercent(this.id)">25%</button>
-              <button class="fiftyPercent" id="fiftyPercent" value="0.5" onclick="tipPercent(this.id)">50%</button>
+              <button class="fivePercent" id="fivePercent" value="5" onclick="tipPercent(this.id)">5%</button>
+              <button class="tenPercent" id="tenPercent" value="10" onclick="tipPercent(this.id)">10%</button>
+              <button class="fifteenPercent" id="fifteenPercent" value="15" onclick="tipPercent(this.id)">15%</button>
+              <button class="twentyFivePercent" id="twentyFivePercent" value="25" onclick="tipPercent(this.id)">25%</button>
+              <button class="fiftyPercent" id="fiftyPercent" value="50" onclick="tipPercent(this.id)">50%</button>
               <button class="customPercent" id="customPercent" onclick="openCustom(); tipPercent(this.id)">Custom</button>
               <div class="calculator__input--tip--button--custom flex" id ="customvalue">
                 <label for="percent">Enter the tip percent.</label>
@@ -48,6 +48,7 @@
               </div>
             </div>
           </div>
+          
           <div class="calculator__input--people flex">
             <div class="calculator__input--people--label flex">
               <label for="people">Number of People</label><br />
